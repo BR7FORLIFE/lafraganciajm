@@ -1,0 +1,24 @@
+---
+interface Props {
+  url: string;
+  name: string;
+  src: string;
+  alt: string;
+}
+
+const { url, name, src, alt } = Astro.props;
+---
+
+<a
+  href={url}
+  class="group relative flex items-center justify-start md:w-10 md:h-10 rounded-r-xl bg-black/50 hover:md:w-auto hover:pl-3 transition-all duration-300"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img src={src} alt={alt} class="w-6 h-6 object-contain z-10" />
+  <span
+    class="hidden md:block absolute left-12 text-neutral-200 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap"
+  >
+    {name}
+  </span>
+</a>

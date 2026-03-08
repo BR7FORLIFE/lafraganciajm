@@ -1,5 +1,6 @@
 ---
 import type { useTranslate } from "@Lib/i18n";
+import SocialIcon from "@Components/islands/SocialIcon.astro";
 
 interface Props {
   t: ReturnType<typeof useTranslate>;
@@ -7,47 +8,30 @@ interface Props {
 
 const { t } = Astro.props as Props;
 
-interface SocialMedia {
-  url: string;
-  name: string;
-  links: {
-    image: string;
-    alt: string;
-  };
-}
-
-const socialMedia: SocialMedia[] = [
+const socialMedia = [
   {
     url: "",
     name: "Facebook",
-    links: {
-      image: "/resources/hero/facebook.svg",
-      alt: "Facebook icon",
-    },
+    src: "/resources/hero/facebook.svg",
+    alt: "Facebook icon",
   },
   {
     url: "",
     name: "Instagram",
-    links: {
-      image: "/resources/hero/instagram.svg",
-      alt: "Instagram icon",
-    },
+    src: "/resources/hero/instagram.svg",
+    alt: "Instagram icon",
   },
   {
     url: "",
-    name: "WhatsAap",
-    links: {
-      image: "/resources/hero/whatsapp.svg",
-      alt: "WhatApp icon",
-    },
+    name: "WhatsApp",
+    src: "/resources/hero/whatsapp.svg",
+    alt: "WhatsApp icon",
   },
   {
     url: "",
     name: "Gmail",
-    links: {
-      image: "/resources/hero/gmail.svg",
-      alt: "Gmail icon",
-    },
+    src: "/resources/hero/gmail.svg",
+    alt: "Gmail icon",
   },
 ];
 
@@ -61,11 +45,10 @@ const cte = t("hero").cte;
   <!-- imagen de fondo -->
   <div class="absolute inset-0 flex justify-center items-center">
     <img
-      src="/src/assets/hero/client-images/hero-client-without-bg.png"
-      alt="client image without background"
+      src="/resources/hero/client-images/hero-client-without-bg.png"
+      alt="client image"
       class="w-135 h-auto object-contain brightness-110 contrast-110 mask-b-from-10% mask-b-to-97%"
     />
-
     <div
       class="absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent"
     >
@@ -118,22 +101,8 @@ const cte = t("hero").cte;
     class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-row gap-4 md:fixed md:top-1/2 md:left-5 md:-translate-y-1/2 md:flex-col md:gap-6 z-50"
   >
     {
-      socialMedia.map(({ name, url, links }) => (
-        <a
-          href={url}
-          class="group relative flex items-center justify-start md:w-10 md:h-10 rounded-r-xl bg-black/50 hover:md:w-auto hover:pl-3 transition-all duration-300"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src={links.image}
-            alt={links.alt}
-            class="w-6 h-6 object-contain z-10"
-          />
-          <span class="hidden md:block absolute left-12 text-neutral-200 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-            {name}
-          </span>
-        </a>
+      socialMedia.map(({ url, name, src, alt }) => (
+        <SocialIcon url={url} name={name} src={src} alt={alt} />
       ))
     }
   </section>
