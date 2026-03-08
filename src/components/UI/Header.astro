@@ -1,0 +1,121 @@
+---
+import { useTranslate } from "@Lib/i18n";
+
+interface Props {
+  locale: "es" | "en";
+}
+
+const { locale } = Astro.props as Props;
+
+const t = useTranslate(locale);
+const links = t("header").links;
+---
+
+<header
+  data-aos="fade-down"
+  data-aos-delay="300"
+  class="fixed w-dvw h-18 border border-b-neutral-600 flex justify-between items-center bg-black left-0 z-50"
+>
+  <section class="flex items-center gap-4 ml-4">
+    <img
+      src="/resources/header/menu.svg"
+      alt="menu icon"
+      class="w-8 h-auto object-contain md:hidden"
+    />
+    <h1 class="text-secondary text-xl font-raleway font-semibold">
+      LaFraganciaJM
+    </h1>
+  </section>
+  <section class="flex items-center gap-4 mr-4">
+    {
+      links.map((link) => {
+        return (
+          <a href={link} class="text-white text-sm hidden md:block">
+            {link}
+          </a>
+        );
+      })
+    }
+    <button>
+      <img
+        src="/resources/header/store.svg"
+        alt="store icon"
+        class="w-8 h-auto object-contain"
+      />
+    </button>
+
+    <div class="relative">
+      <button
+        id="langBtn"
+        class="flex items-center gap-2 text-white cursor-pointer"
+      >
+        <img
+          src="/resources/header/languaje.svg"
+          alt="Translate icon"
+          class="w-5 h-5"
+        />
+        <svg
+          class="w-4 h-4 transition-transform duration-200"
+          id="arrow"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+
+      <div
+        id="langMenu"
+        class="absolute right-0 mt-3 w-36 bg-neutral-900 border border-neutral-700
+           rounded-xl shadow-lg opacity-0 scale-95 pointer-events-none
+           transition-all duration-200"
+      >
+        <a
+          href="/es/"
+          class="block px-4 py-2 text-sm text-white hover:bg-neutral-800 rounded-t-xl"
+        >
+          Español
+        </a>
+        <a
+          href="/en/"
+          class="block px-4 py-2 text-sm text-white hover:bg-neutral-800 rounded-b-xl"
+        >
+          English
+        </a>
+      </div>
+    </div>
+  </section>
+</header>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const btn = document.getElementById("langBtn");
+    const menu = document.getElementById("langMenu");
+    const arrow = document.getElementById("arrow");
+
+    btn?.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      menu?.classList.toggle("opacity-0");
+      menu?.classList.toggle("scale-95");
+      menu?.classList.toggle("pointer-events-none");
+
+      arrow?.classList.toggle("rotate-180");
+    });
+
+    document.addEventListener("click", (e) => {
+      const target = e.target as Node;
+
+      if (!btn?.contains(target) && !menu?.contains(target)) {
+        menu?.classList.add("opacity-0", "scale-95", "pointer-events-none");
+        arrow?.classList.remove("rotate-180");
+      }
+    });
+  });
+</script>

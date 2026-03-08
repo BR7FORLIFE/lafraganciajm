@@ -1,0 +1,24 @@
+---
+import type { GetStaticPaths } from "astro";
+import { useTranslate } from "@Lib/i18n";
+
+export const getStaticPaths = (() => {
+  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
+}) satisfies GetStaticPaths;
+
+import Layout from "@Layout/Layout.astro";
+import Hero from "@Components/UI/Hero.astro";
+import PerfumesCatalog from "@Components/UI/PerfumesCatalog.astro";
+import Footer from "@Components/UI/Footer.astro";
+
+const { lang } = Astro.params;
+
+const locale = (lang === "es" ? "es" : "en") as "es" | "en";
+
+const t = useTranslate(locale);
+---
+
+<Layout locale={locale}>
+  <Hero t={t} />
+  <Footer t={t} />
+</Layout>

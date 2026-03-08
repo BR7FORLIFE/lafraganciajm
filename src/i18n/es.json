@@ -1,0 +1,15 @@
+{
+    "header": {
+        "links": ["COLECCIÓN", "RESEÑAS", "CONTACTOS"]
+    },
+    "hero": {
+        "phrases": ["La esencia del lujo encapsulada en cada gota.", "Haz que cada paso tenga su propio aroma"],
+        "cte": "Explorar Colección"
+    },
+    "footer": {
+        "subtitle": "Elevamos tu presencia a través de aromas exclusivos y sofisticados. Expertos en fragancias de lujos",
+        "contact": "Contacto",
+        "newletter": "Información",
+        "copiright": "Todos los derechos reservados"
+    }
+}

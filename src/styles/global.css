@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme{
+    --color-primary: #ffe500; /*Negro*/
+    --color-secondary: #ffd900; /*amarillo*/
+
+
+    --font-raleway: "Raleway", sans-serif; 
+    --font-betania: "Betania Patmos", sans-serif;
+}
