@@ -6,6 +6,18 @@
         "phrases": ["The essence of luxury encapsulated in every drop.", "Make each step have its own aroma"],
         "cte": "Explore Colection"
     },
+    "catalog": {
+        "title": {
+            "firts": "EXCLUSIVENESS",
+            "second": "Our Collection",
+            "paragraph": "A curated selection of international aromas chosen for the most discerning tastes."
+        },
+        "details": "View Details"
+    },
+    "reviews": {
+        "title": "What our customers say",
+        "paragraph": "The quality of the perfumes is unparalleled. I receive compliments every time I wear L'Éclat Noir. The delivery service was impeccable."
+    },
     "footer": {
         "subtitle": "We elevate your presence with exclusive and beloved fragrances. Experts in luxury fragrances",
         "contact": "Contact",

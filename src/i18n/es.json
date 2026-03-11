@@ -5,6 +5,18 @@
     "hero": {
         "phrases": ["La esencia del lujo encapsulada en cada gota.", "Haz que cada paso tenga su propio aroma"],
         "cte": "Explorar Colección"
+    },    
+    "catalog": {
+        "title": {
+            "firts": "EXCLUSIVIDAD",
+            "second": "Nuestra Colección",
+            "paragraph": "Curaduria de aromas internacionales seleccionados para para los gustos más exigentes"
+        },
+        "details": "Ver detalles"
+    },
+    "reviews": {
+        "title": "Lo que dicen nuestros clientes",
+        "paragraph": "La calidad de los perfumes es incomparable. Recibo cumplidos cada vez que uso L'Éclat Noir. El servicio de entrega fue impecable."
     },
     "footer": {
         "subtitle": "Elevamos tu presencia a través de aromas exclusivos y sofisticados. Expertos en fragancias de lujos",
