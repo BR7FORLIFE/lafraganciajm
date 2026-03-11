@@ -1,11 +1,6 @@
 ---
-import { useTranslate } from "lib/i18n";
-
-interface Props {
-  t: ReturnType<typeof useTranslate>;
-}
-
-const { t } = Astro.props as Props;
+import { type TranslationProps } from "@Lib/types/translationTypeProps";
+const { t } = Astro.props as TranslationProps;
 
 interface Contact {
   name: string;
