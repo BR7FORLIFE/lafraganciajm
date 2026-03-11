@@ -1,0 +1,27 @@
+---
+import type { TranslationProps } from "@Lib/types/translationTypeProps";
+
+const { t } = Astro.props as TranslationProps;
+
+import ReviewsCard from "@Components/islands/ReviewsCard.astro";
+
+const title = t("reviews").title;
+---
+
+<section class="w-full py-16 px-4 md:px-12 flex flex-col gap-12">
+  <div class="flex flex-col gap-4 items-center text-center">
+    <h2 class="text-primary font-raleway text-2xl font-semibold md:text-4xl">
+      {title}
+    </h2>
+
+    <div class="w-20 md:w-24 border-b-4 border-primary"></div>
+  </div>
+
+  <div
+    class="flex flex-col items-center gap-8 md:flex-row md:justify-center md:gap-10"
+  >
+    <ReviewsCard />
+    <ReviewsCard />
+    <ReviewsCard />
+  </div>
+</section>
