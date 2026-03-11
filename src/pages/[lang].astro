@@ -9,6 +9,7 @@ export const getStaticPaths = (() => {
 import Layout from "@Layout/Layout.astro";
 import Hero from "@Components/UI/Hero.astro";
 import PerfumesCatalog from "@Components/UI/PerfumesCatalog.astro";
+import Reviews from "@Components/UI/reviews.astro";
 import Footer from "@Components/UI/Footer.astro";
 
 const { lang } = Astro.params;
@@ -20,5 +21,7 @@ const t = useTranslate(locale);
 
 <Layout locale={locale}>
   <Hero t={t} />
+  <PerfumesCatalog locale={locale} t={t} />
+  <Reviews t={t} />
   <Footer t={t} />
 </Layout>

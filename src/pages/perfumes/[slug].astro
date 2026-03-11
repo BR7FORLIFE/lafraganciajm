@@ -1,0 +1,24 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+
+export const getStaticPaths = (async () => {
+  const perfumes = await getCollection("perfumes");
+
+  return perfumes.map((perfume) => {
+    const [lang] = perfume.id.split("/");
+
+    return {
+      params: {
+        lang,
+        slug: perfume.data.slug.replace(`-${lang}`, ""),
+      },
+      props: {
+        perfume,
+      },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+const { perfume } = Astro.props;
+---
