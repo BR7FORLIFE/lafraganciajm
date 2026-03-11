@@ -15,6 +15,7 @@
       "@Styles/*": ["styles/*"]
     },
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "verbatimModuleSyntax": true
   }
 }
