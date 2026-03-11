@@ -1,8 +1,48 @@
 ---
+import { getCollection } from "astro:content";
+import type { TranslationProps } from "@Lib/types/translationTypeProps";
+import CardPerfume from "@Components/islands/CardPerfume.astro";
 
+const { locale, t } = Astro.props as { locale: "es" | "en" } & TranslationProps;
+
+const perfumes = await getCollection("perfumes");
+
+const filtered = perfumes.filter((p) => p.id.endsWith(`-${locale}.md`));
+
+const title = t("catalog").title.firts;
+const secondTitle = t("catalog").title.second;
+const paragraph = t("catalog").title.paragraph;
 ---
 
-
-<section>
-    
+<section
+  class="w-full h-dvh inline-flex flex-col items-center justify-center md:px-24 gap-6 md:items-start md:justify-start"
+>
+  <span class="text-primary font-semibold text-md font-raleway">{title}</span>
+  <div
+    class="w-full h-auto flex flex-col items-center justify-between gap-4 md:flex-row md:gap-0"
+  >
+    <span class="text-xl font-raleway text-primary font-semibold md:text-5xl"
+      >{secondTitle}</span
+    >
+    <div class="flex-1 h-px border-t border-yellow-200 mx-6 hidden md:block">
+    </div>
+    <p class="text-white font-raleway text-sm w-70 text-center">
+      {paragraph}
+    </p>
+  </div>
+  <article class="w-full h-auto grid grid-cols-1 md:grid-cols-3 place-content-center">
+    {
+      filtered.map((perfume) => {
+        return (
+          <CardPerfume
+            t={t}
+            title={perfume.data.title}
+            description={perfume.data.description}
+            price={perfume.data.price}
+            slug={perfume.data.slug}
+          />
+        );
+      })
+    }
+  </article>
 </section>
