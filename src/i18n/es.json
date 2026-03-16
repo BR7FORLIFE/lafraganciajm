@@ -1,7 +1,10 @@
 {
-    "header": {
-        "links": ["COLECCIÓN", "RESEÑAS", "CONTACTOS"]
-    },
+    "header": [
+        {"name": "INICIO", "link": "#home"},
+        { "name": "COLECCION", "link": "#collection" },
+        { "name": "RESEÑAS", "link": "#reviews" },
+        { "name": "CONTACTO", "link": "#contact" } 
+    ],
     "hero": {
         "phrases": ["La esencia del lujo encapsulada en cada gota.", "Haz que cada paso tenga su propio aroma"],
         "cte": "Explorar Colección"
@@ -16,7 +19,20 @@
     },
     "reviews": {
         "title": "Lo que dicen nuestros clientes",
-        "paragraph": "La calidad de los perfumes es incomparable. Recibo cumplidos cada vez que uso L'Éclat Noir. El servicio de entrega fue impecable."
+        "info": [
+            {
+                "user": "Carlos Garcia",
+                "paragraph": "Desde que empecé a usar este perfume siempre me preguntan cuál es. Huele súper bien y dura bastante, incluso después de varias horas todavía se siente."
+            },
+            {
+                "user": "María Alejandra",
+                "paragraph": "La verdad me sorprendió mucho. El aroma es elegante pero no exagerado, y cada vez que lo uso alguien me dice que huelo rico."
+            },
+            {
+                "user": "Andrés",
+                "paragraph": "Es uno de mis perfumes favoritos ahora. Tiene un olor dulce y agradable que llama la atención sin ser pesado, y me ha dado varios cumplidos."
+            }
+        ]
     },
     "footer": {
         "subtitle": "Elevamos tu presencia a través de aromas exclusivos y sofisticados. Expertos en fragancias de lujos",
