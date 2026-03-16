@@ -3,7 +3,7 @@ import type { TranslationProps } from "@Lib/types/translationTypeProps";
 
 const { t } = Astro.props as TranslationProps;
 
-const { title, description, price, slug } = Astro.props;
+const { title, image, description, price, slug } = Astro.props;
 const details = t("catalog").details;
 ---
 
@@ -12,7 +12,7 @@ const details = t("catalog").details;
 >
   <!-- imagen -->
   <img
-    src="/resources/catalog/perfume-1.png"
+    src={image}
     alt="perfume image"
     class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-120"
   />
@@ -30,13 +30,13 @@ const details = t("catalog").details;
 
     <!-- precio y boton -->
     <div class="flex items-center justify-between">
-      <span class="text-primary text-lg font-semibold">
+      <span class="text-primary text-sm font-semibold">
         {price}
       </span>
 
       <a
         href={slug}
-        class="text-primary text-sm font-semibold border-b border-primary pb-1 hover:opacity-80 transition"
+        class="text-primary text-sm font-semibold border-b border-primary pb-1 hover:opacity-80 transition cursor-pointer"
       >
         {details}
       </a>
