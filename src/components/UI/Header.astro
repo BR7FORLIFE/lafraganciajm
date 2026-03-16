@@ -8,7 +8,8 @@ interface Props {
 const { locale } = Astro.props as Props;
 
 const t = useTranslate(locale);
-const links = t("header").links;
+
+const header = t("header");
 ---
 
 <header
@@ -28,10 +29,13 @@ const links = t("header").links;
   </section>
   <section class="flex items-center gap-4 mr-4">
     {
-      links.map((link) => {
+      header.map(({ name, link }) => {
         return (
-          <a href={link} class="text-white text-sm hidden md:block">
-            {link}
+          <a
+            href={`/${locale}/${link}`}
+            class="text-white text-sm hidden md:block transition-colors hover:text-primary duration-100 ease-in-out"
+          >
+            {name}
           </a>
         );
       })
