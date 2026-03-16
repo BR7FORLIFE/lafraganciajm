@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import type { TranslationProps } from "@Lib/types/translationTypeProps";
 import CardPerfume from "@Components/islands/CardPerfume.astro";
 
@@ -7,7 +7,9 @@ const { locale, t } = Astro.props as { locale: "es" | "en" } & TranslationProps;
 
 const perfumes = await getCollection("perfumes");
 
-const filtered = perfumes.filter((p) => p.id.endsWith(`-${locale}.md`));
+const filtered: CollectionEntry<"perfumes">[] = perfumes.filter((p) =>
+  p.id.endsWith(`-${locale}.md`),
+);
 
 const title = t("catalog").title.firts;
 const secondTitle = t("catalog").title.second;
@@ -15,7 +17,10 @@ const paragraph = t("catalog").title.paragraph;
 ---
 
 <section
-  class="w-full h-dvh inline-flex flex-col items-center justify-center md:px-24 gap-6 md:items-start md:justify-start"
+  data-aos="fade-up"
+  data-aos-duration="1500"
+  id="collection"
+  class="w-full h-auto inline-flex flex-col items-center justify-center md:px-24 gap-6 md:items-start md:justify-start"
 >
   <span class="text-primary font-semibold text-md font-raleway">{title}</span>
   <div
@@ -30,16 +35,19 @@ const paragraph = t("catalog").title.paragraph;
       {paragraph}
     </p>
   </div>
-  <article class="w-full h-auto grid grid-cols-1 md:grid-cols-3 place-content-center">
+  <article
+    class="w-full h-auto grid grid-cols-1 md:grid-cols-3 md:gap-y-12 place-content-center gap-y-4"
+  >
     {
       filtered.map((perfume) => {
         return (
           <CardPerfume
             t={t}
             title={perfume.data.title}
+            image={perfume.data.url}
             description={perfume.data.description}
             price={perfume.data.price}
-            slug={perfume.data.slug}
+            slug={perfume.slug}
           />
         );
       })
