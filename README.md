@@ -1,46 +1,56 @@
-# Astro Starter Kit: Basics
+# 🌟 Página Web - La Fragancia JM
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Bienvenido a la página oficial de **La Fragancia JM**, un emprendimiento dedicado a ofrecer perfumes de excelente calidad, con aromas elegantes, duraderos y perfectos para cada ocasión.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Nuestro objetivo es ayudarte a encontrar la fragancia ideal que refleje tu estilo y personalidad.
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🧴 Catálogo de Perfumes
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+En esta sección podrás explorar diferentes perfumes disponibles en nuestro catálogo.  
+Cada producto incluye:
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- Nombre del perfume
+- Descripción del aroma
+- Precio
+- Imagen del producto
 
-## 🧞 Commands
+Así podrás conocer mejor cada fragancia antes de realizar tu compra.
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+## ⭐ Reseñas de Clientes
 
-## 👀 Want to learn more?
+Aquí encontrarás comentarios de personas que ya han probado nuestros perfumes.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Las reseñas ayudan a conocer la experiencia de otros clientes y descubrir cuáles fragancias son las más recomendadas.
+
+---
+
+## 📱 Redes Sociales y Contacto
+
+También podrás acceder fácilmente a nuestras redes sociales y medios de contacto:
+
+- Facebook
+- Instagram
+- WhatsApp
+- Correo electrónico
+
+De esta manera puedes comunicarte con nosotros para resolver dudas, pedir recomendaciones o realizar tu pedido.
+
+---
+
+## 🌍 Idiomas
+
+La página está disponible en **Español** e **Inglés**, para que más personas puedan conocer nuestros productos.
+
+---
+
+## 💎 Nuestra misión
+
+En **La Fragancia JM** buscamos ofrecer perfumes que transmitan elegancia, personalidad y confianza, brindando siempre una atención cercana y de calidad a cada cliente.
+
+---
+
+**BR7FORLIFE**

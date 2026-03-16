@@ -11,7 +11,7 @@ export const getStaticPaths = (async () => {
     return {
       params: {
         lang,
-        slug: perfume.data.slug.replace(`-${lang}`, ""),
+        slug: perfume.slug.replace(`-${lang}`, ""),
       },
       props: {
         perfume,
