@@ -6,25 +6,25 @@ const { t } = Astro.props as TranslationProps;
 
 const socialMedia = [
   {
-    url: "",
+    url: "https://www.facebook.com/profile.php?id=61584373711977",
     name: "Facebook",
     src: "/resources/hero/facebook.svg",
     alt: "Facebook icon",
   },
   {
-    url: "",
+    url: "https://www.instagram.com/lafragancia_jm/",
     name: "Instagram",
     src: "/resources/hero/instagram.svg",
     alt: "Instagram icon",
   },
   {
-    url: "",
+    url: "https://wa.me/573233375315?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios",
     name: "WhatsApp",
     src: "/resources/hero/whatsapp.svg",
     alt: "WhatsApp icon",
   },
   {
-    url: "",
+    url: "mailto:jorgeospinom202@gmail.com?subject=Consulta%20perfumes&body=Hola%20quiero%20información",
     name: "Gmail",
     src: "/resources/hero/gmail.svg",
     alt: "Gmail icon",
@@ -36,7 +36,8 @@ const cte = t("hero").cte;
 ---
 
 <section
-  class="w-full h-dvh relative flex flex-row justify-between items-center overflow-hidden"
+  id="home"
+  class="w-full h-dvh relative flex flex-row justify-between items-center overflow-hidden pb-24 md:pb-0"
 >
   <!-- imagen de fondo -->
   <div class="absolute inset-0 flex justify-center items-center">
@@ -56,14 +57,14 @@ const cte = t("hero").cte;
   </div>
 
   <article
-    class="relative flex flex-col items-center justify-center md:items-end md:justify-center w-full md:absolute md:inset-0"
+    class="relative flex flex-col justify-end items-center w-full h-full md:items-end md:justify-center md:absolute md:inset-0"
   >
     <!-- Sección título, frases y botón -->
     <section
       class="flex flex-col items-center text-center md:max-w-md md:px-4 md:mr-12"
     >
       <h1
-        class="text-secondary font-betania text-6xl leading-[0.9] md:text-8xl font-semibold drop-shadow-lg"
+        class="hidden text-secondary font-betania text-6xl leading-[0.9] md:text-8xl font-semibold drop-shadow-lg md:block"
       >
         La <br /> Fragancia <br /> JM
       </h1>
@@ -83,11 +84,12 @@ const cte = t("hero").cte;
           ))
         }
 
-        <button
+        <a
           class="mt-8 px-8 py-3 rounded-xl bg-secondary text-black font-semibold shadow-lg hover:scale-105 transition"
+          href="#collection"
         >
           {cte}
-        </button>
+        </a>
       </div>
     </section>
   </article>
