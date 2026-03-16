@@ -30,7 +30,7 @@ const { locale } = Astro.props;
 
   document.addEventListener("astro:page-load", () => {
     AOS.init({
-      once: true,
+      once: false,
     });
   });
 </script>
@@ -39,4 +39,8 @@ const { locale } = Astro.props;
   @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"); /*raleway */
 
   @import url("https://fonts.googleapis.com/css2?family=Betania+Patmos&display=swap"); /*betania */
+
+  html {
+    scroll-behavior: smooth;
+  }
 </style>
