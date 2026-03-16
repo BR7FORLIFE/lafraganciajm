@@ -1,5 +1,5 @@
 ---
-
+const { user, description } = Astro.props;
 ---
 
 <section
@@ -11,8 +11,7 @@
   <p
     class="text-gray-300 italic text-base sm:text-lg leading-relaxed font-raleway"
   >
-    "La calidad de los perfumes es incomparable. Recibo cumplidos cada vez que
-    uso L'Éclat Noir. El servicio de entrega fue impecable."
+    {description}
   </p>
 
   <!--usuario -->
@@ -24,7 +23,7 @@
     </div>
 
     <span class="text-white font-semibold text-base sm:text-lg font-raleway">
-      Bryan Diaz Pacheco
+      {user}
     </span>
   </div>
 </section>
