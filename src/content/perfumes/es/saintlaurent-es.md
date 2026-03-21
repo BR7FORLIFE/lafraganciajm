@@ -5,6 +5,5 @@ price: "$96.000 COP"
 url: "/resources/catalog/perfume-5.png"
 ---
 
-## Detalles
 
 Inspirado en el estilo elegante y audaz de la casa Yves Saint Laurent, este perfume ofrece una mezcla equilibrada entre frescura y profundidad. Sus notas crean una fragancia sofisticada, perfecta para hombres que buscan destacar con un aroma moderno, seductor y duradero.
