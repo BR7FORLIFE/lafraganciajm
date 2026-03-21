@@ -11,6 +11,11 @@ const filtered: CollectionEntry<"perfumes">[] = perfumes.filter((p) =>
   p.id.endsWith(`-${locale}.md`),
 );
 
+const cleanSlug = (id: string, locale: string) => {
+  const [_, slug] = id.split("/");
+  return slug.replace(`-${locale}.md`, "");
+};
+
 const title = t("catalog").title.firts;
 const secondTitle = t("catalog").title.second;
 const paragraph = t("catalog").title.paragraph;
@@ -47,7 +52,7 @@ const paragraph = t("catalog").title.paragraph;
             image={perfume.data.url}
             description={perfume.data.description}
             price={perfume.data.price}
-            slug={perfume.slug}
+            slug={cleanSlug(perfume.id, locale)}
           />
         );
       })
