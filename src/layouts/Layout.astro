@@ -21,7 +21,9 @@ const { locale } = Astro.props;
     class="container p-0 m-0 min-w-screen min-h-screen bg-black overflow-x-hidden"
   >
     <Header locale={locale} />
-    <slot />
+    <main class="pt-8 min-h-screen">
+      <slot />
+    </main>
   </body>
 </html>
 
