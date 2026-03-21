@@ -22,11 +22,10 @@ export const getStaticPaths = (async () => {
   });
 }) satisfies GetStaticPaths;
 
+const { lang } = Astro.params;
 import Layout from "@Layout/Layout.astro";
 const { perfume } = Astro.props;
 const { Content } = await perfume.render();
-
-const [lang, _] = perfume.id.split("/");
 ---
 
 <Layout locale={lang}>

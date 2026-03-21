@@ -3,7 +3,7 @@ import type { TranslationProps } from "@Lib/types/translationTypeProps";
 
 const { t } = Astro.props as TranslationProps;
 
-const { title, image, description, price, slug } = Astro.props;
+const { title, image, description, price, slug, locale } = Astro.props;
 const details = t("catalog").details;
 ---
 
@@ -35,7 +35,7 @@ const details = t("catalog").details;
       </span>
 
       <a
-        href={slug}
+        href={`/${locale}/${slug}`}
         class="text-primary text-sm font-semibold border-b border-primary pb-1 hover:opacity-80 transition cursor-pointer"
       >
         {details}

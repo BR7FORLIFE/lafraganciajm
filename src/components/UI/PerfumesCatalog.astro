@@ -53,6 +53,7 @@ const paragraph = t("catalog").title.paragraph;
             description={perfume.data.description}
             price={perfume.data.price}
             slug={cleanSlug(perfume.id, locale)}
+            locale={locale}
           />
         );
       })
