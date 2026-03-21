@@ -12,13 +12,13 @@ const socialMedia = [
     alt: "Facebook icon",
   },
   {
-    url: "https://www.instagram.com/lafragancia_jm/",
-    name: "Instagram",
-    src: "/resources/hero/instagram.svg",
-    alt: "Instagram icon",
+    url: "https://www.tiktok.com/@lafragancia_jm",
+    name: "Tiktok",
+    src: "/resources/hero/tiktok.svg",
+    alt: "Tiktok icon",
   },
   {
-    url: "https://wa.me/573233375315?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios",
+    url: "https://wa.me/573001666077?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios",
     name: "WhatsApp",
     src: "/resources/hero/whatsapp.svg",
     alt: "WhatsApp icon",
@@ -37,7 +37,7 @@ const cte = t("hero").cte;
 
 <section
   id="home"
-  class="w-full h-dvh relative flex flex-row justify-between items-center overflow-hidden pb-24 md:pb-0"
+  class="w-full h-dvh relative flex flex-row justify-between items-center overflow-hidden pb-32 md:pb-0"
 >
   <!-- imagen de fondo -->
   <div class="absolute inset-0 flex justify-center items-center">
@@ -96,7 +96,7 @@ const cte = t("hero").cte;
 
   <!-- Sidebar de redes sociales -->
   <section
-    class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-row gap-4 md:fixed md:top-1/2 md:left-5 md:-translate-y-1/2 md:flex-col md:gap-6 z-40"
+    class="absolute bottom-18 left-1/2 -translate-x-1/2 flex flex-row gap-4 md:fixed md:top-1/2 md:left-5 md:-translate-y-1/2 md:flex-col md:gap-6 z-40"
   >
     {
       socialMedia.map(({ url, name, src, alt }) => (
