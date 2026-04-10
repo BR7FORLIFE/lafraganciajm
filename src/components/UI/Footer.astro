@@ -15,7 +15,7 @@ const contacts: Contact[] = [
   {
     name: "+57 3001666077",
     links: {
-      url: "https://wa.me/573233375315?text=Hola%20quiero%20información%20sobre%20sus%20servicios",
+      url: "https://wa.me/573001666077?text=Hola%20quiero%20información%20sobre%20sus%20servicios",
       image: "/resources/hero/contacts/cellphone.svg",
       alt: "cellphone icon",
     },
@@ -98,7 +98,7 @@ const copiright = t("footer").copiright;
       >
       <div class="h-10 flex justify-center items-center px-4 gap-2">
         <input
-          type="text"
+          type="email"
           placeholder="Tu Correo"
           class="w-full h-full border border-yellow-300/60 rounded-lg text-white text-sm pl-4"
         />
@@ -123,3 +123,24 @@ const copiright = t("footer").copiright;
     <span>BR7FORLIFE</span>
   </div>
 </section>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const input = document.querySelector("input");
+    const button = document.querySelector("button");
+
+    button?.addEventListener("click", () => {
+      const email = input?.value.trim();
+
+      if (!email) {
+        return;
+      }
+
+      const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email!);
+
+      if (!isValid) {
+        return;
+      }
+    });
+  });
+</script>
