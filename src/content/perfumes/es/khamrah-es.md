@@ -1,7 +1,7 @@
 ---
 title: "Khamrah Lattafa"
 description: "Lattafa Khamrah Eau de Parfum: aroma dulce, especiado y cálido con toque de vainilla y canela."
-price: "$140.000 COP"
+price: "$130.000 COP"
 url: "/resources/catalog/perfume-4.png"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Armaf Odyssey"
 description: "Armaf Odyssey Homme Eau de Parfum: a sweet, spicy, and warm fragrance with notes of vanilla and elegant amber"
-price: "$180.000 COP"
+price: "$100.000 COP"
 url: "/resources/catalog/perfume-1.png"
 ---
 
