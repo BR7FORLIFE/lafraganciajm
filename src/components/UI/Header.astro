@@ -18,14 +18,18 @@ const header = t("header");
   class="fixed w-dvw h-18 border border-b-neutral-600 flex justify-between items-center bg-black left-0 z-50"
 >
   <section class="flex items-center gap-4 ml-4">
-    <img
-      src="/resources/header/menu.svg"
-      alt="menu icon"
-      class="w-8 h-auto object-contain md:hidden"
-    />
-    <h1 class="text-secondary text-xl font-raleway font-semibold">
-      LaFraganciaJM
-    </h1>
+    <button id="menuBtn" class="md:hidden">
+      <img
+        src="/resources/header/menu.svg"
+        alt="menu icon"
+        class="w-8 h-auto object-contain"
+      />
+    </button>
+    <a href=`/${locale}/`>
+      <h1 class="text-secondary text-xl font-raleway font-semibold">
+        LaFraganciaJM
+      </h1>
+    </a>
   </section>
   <section class="flex items-center gap-4 mr-4">
     {
@@ -123,3 +127,4 @@ const header = t("header");
     });
   });
 </script>
+
